@@ -24,5 +24,7 @@ functions -> URL - HTTP 'GET'
 - Allows us to set the API path as URL to view
 in the browser
 
+**Running Flask**
+
 - First install flask `pip install flask`
 - How to run the Flask app `flask run`
