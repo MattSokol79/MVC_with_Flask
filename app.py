@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, jsonify, redirect, url_for, render_template
 
 # Create an instance of our app
 app = Flask(__name__)
@@ -41,7 +41,7 @@ def greet_user():
 
 # Find out the module to redirect the user back to specific page (welcome page)
 # In this case, we are creating a login url which redirects to the welcome page when accessed
-@app.route('/login/') # -> http://127.0.0.1:5000/login/
+@app.route('/logintest/') # -> http://127.0.0.1:5000/logintest/
 def login():
     return redirect(url_for("greet_user")) # Redirects to the function greet user which has URL /welcome/
 
@@ -56,6 +56,16 @@ def login():
 def welcome_user(username):
     return f"<h1>Welcome to the dream team of DevOps {username}!</h1>"
 
+#########################################################################
+
+# Gets HTML into flask to be used
+@app.route('/index/') # http://127.0.0.1:5000/index/
+def index():
+    return render_template('index.html')
+
+#########################################################################
+
+# Text boxes for login form
 
 if __name__ == "__main__":
     app.run(debug=True)

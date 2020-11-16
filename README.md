@@ -99,3 +99,18 @@ def welcome_user(username):
 if __name__ == "__main__":
     app.run(debug=True)
 ```
+
+### Interacting with HTML
+- Naming conventions are essential
+- We need to create templates folder in our dir
+- Why? Flask looks for templates folder and
+anything inside the folder
+- We will create index.html inside our templates
+folder
+
+### Bootstrap
+- To design our page with HTML, CSS, JS
+- We go to `https://getbootstrap.com/docs/4.3/getting-started/introduction/`
+where we can copy CSS, JSQuery and Nav bar into the index.html file
+
+for loop in index use url_4????
