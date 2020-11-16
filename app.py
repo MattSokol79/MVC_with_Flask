@@ -34,7 +34,7 @@ def customised_api():
 
 @app.route('/welcome/') # -> http://127.0.0.1:5000/welcome/
 def greet_user():
-    return "<h1>Welcome to DevOps</h1>"
+   return render_template("welcome.html")
 
 
 #########################################################################
@@ -65,7 +65,21 @@ def index():
 
 #########################################################################
 
-# Text boxes for login form
+# Webpage with the login page
+@app.route('/testing/login/') # http://127.0.0.1:5000/testing/login/
+def testing():
+    return render_template("login.html")
+
+
+# Function to access the base.html url
+@app.route('/base/') # http://127.0.0.1:5000/base/
+def base():
+    return render_template('base.html')
+
+# Webpage for loop
+@app.route('/forloop') # http://127.0.0.1:5000/forloop
+def for_loop():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

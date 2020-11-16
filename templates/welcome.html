@@ -3,16 +3,9 @@
 
 {% block head %}
 {{ super() }}
-<h1>{% block title %}Testing Loops{% endblock %}</h1>
+<h1>{% block title %}Welcome Page for all{% endblock %}</h1>
 {% endblock %}
+
 {% block content %}
 {{ super() }}
-
-<h3>for loop:</h3>
-
-{% for i in range(11) %}
-<li>{{ i }}</li>
-{% endfor %}
-
 {% endblock %}
-
